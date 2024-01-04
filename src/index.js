@@ -1,3 +1,5 @@
-import MakeRed from './components';
+import './style.css';
 
-export default MakeRed;
+import UIRender from './components';
+
+export default UIRender;
