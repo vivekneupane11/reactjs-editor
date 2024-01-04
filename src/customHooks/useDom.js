@@ -1,8 +1,7 @@
 import { create } from 'zustand';
-import { htmlJson } from '../utils/html-content';
 
 export const useDom = create((set) => ({
-  dom:{...htmlJson} ,
+  dom:null ,
   setDom: (domElement) => set((state)=>({dom:domElement}))
 
 })
