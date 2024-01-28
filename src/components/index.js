@@ -8,7 +8,7 @@ import { createComponents } from "../utils/createcomponents";
 import CommentModal from "./CommentModal";
 import Modal from "./Modal";
 import FloatingToolBar from "./floatingToolBar";
-const UIRender = (props) => {
+const ReactEditor = (props) => {
   const open = useModal((state) => state.open);
   const openComment = useCommentModal((state) => state.openComment);
   const setDom = useDom((state) => state.setDom);
@@ -34,10 +34,9 @@ if(!dom){
     }
       <FloatingToolBar x={mousePoint.x} y={mousePoint.y} />
 
-      {/* Just a notice for mobile users */}
-    <p>Not available for mobile</p>
+     
     </>
   );
 };
 
-export default UIRender;
+export default ReactEditor;

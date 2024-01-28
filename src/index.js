@@ -1,5 +1,5 @@
 import './style.css';
 
-import UIRender from './components';
+import ReactEditor from './components';
 
-export default UIRender;
+export default ReactEditor;
