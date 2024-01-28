@@ -24,7 +24,7 @@ if(!dom){
   },[dom,setDom,props])
   return (
     <>
-      {open && <Modal />}
+      {open && <Modal colors={props.colors} />}
       {openComment && <CommentModal />}
 
     {

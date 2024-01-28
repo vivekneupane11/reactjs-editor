@@ -1,33 +1,50 @@
 const colors = [
     {
 name:'red',
-color:'red'
+color:'red',
+textColor:'#fff'
 },
 {
     name:'gold',
-    color:'gold'
+    color:'gold',
+    textColor:'#fff'
+
     },    {
         name:'white',
-        color:'white'
+        color:'white',
+        textColor:'#000'
+
         },    {
             name:'blue',
-            color:'blue'
+            color:'blue',
+            textColor:'#fff'
+
             },    {
                 name:'green',
-                color:'green'
+                color:'green',
+                textColor:'#fff'
+
                 },    {
                     name:'purple',
-                    color:'purple'
+                    color:'purple',
+                    textColor:'#fff'
+
                     },
                     {
                         name:'orange',
-                        color:'orange'
+                        color:'orange',
+                        textColor:'#fff'
+
                         },    {
                             name:'grey',
-                            color:'grey'
+                            color:'grey',
+                            textColor:'#fff'
+
                             },    {
                                 name:'pink',
-                                color:'pink'
+                                color:'pink',
+                                textColor:'#fff'
+
                                 },
 
 ]
