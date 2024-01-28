@@ -194,8 +194,7 @@ ul {
   font-family: "Times New Roman", Times, serif;
 }
 .btn-submit:hover {
-  background: gold;
-  color: #000;
+  background: #482696;
 }
 .modal-content h1 {
   color: #0b0b78;
@@ -225,11 +224,11 @@ ul {
   padding: 15px 20px;
   border-radius: 20px;
   border: 30px solid trasparent;
-  color: #f1f1f1;
+  color: #000;
   font-style: italic;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  background: #000000; /* Fallback color */
-  background: linear-gradient(to bottom, #333333, #000000);
+  box-shadow: 0 4px 8px #ffe8e8;
+  background: #fff;
+  background: linear-gradient(180deg,#ffe8e8,#fff);
   transition: 1s all ease;
   transition-delay: 0.5s;
 }
@@ -241,10 +240,10 @@ ul {
   text-transform: uppercase;
   display: block;
   width: 100%;
-  border-bottom: 0.2px solid gold;
+  border-bottom: 0.2px solid #0b0b78;
   margin-bottom: 16px;
   font-weight: 900;
-  color: gold;
+  color: #0b0b78;
 }
 
 .comment::before {
@@ -277,7 +276,7 @@ ul {
   height: 60%;
   background-color: rgba(255, 255, 255, 0.02);
   border: none;
-  color: white;
+  color: #000;
   border-radius: 12px;
   padding: 12px;
   font-size: 18px;
