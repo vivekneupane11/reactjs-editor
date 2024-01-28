@@ -9,7 +9,7 @@ export default function Modal(props) {
 
   const { addHighlight } = useUpdateDom();
   const toggleModal = useModal((state) => state.toggleModal);
-  const allColors = props.color || colors;
+  const allColors = props.colors || colors;
   useEffect(() => {
     //** Hacky way to call highlight function after changeType state change
     if (type.name && type.value) {
