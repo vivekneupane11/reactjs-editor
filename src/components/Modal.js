@@ -27,17 +27,16 @@ export default function Modal(props) {
 
         <div className="container">
           {allColors.map((color) => (
-            <span className="color-container" key={color.name}>
+            <span className="color-container" key={color}>
               <div
                 className="color-box"
-                onClick={() => chooseColor(color.name)}
+                onClick={() => chooseColor(color)}
                 style={{
-                  backgroundColor: `${color.name}`,
-                  color: `${color.textColor}`,
-                  scale: type.value === color.name ? "1.3" : "1",
+                  backgroundColor: `${color}`,
+                  scale: type.value === color ? "1.3" : "1",
                 }}
               ></div>
-              <span className="color-name">{color.name}</span>
+              <span className="color-name">{color}</span>
             </span>
           ))}
         </div>
