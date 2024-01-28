@@ -86,28 +86,27 @@ ul {
 .floating-toolbar {
   display: flex;
   align-items: center;
-  background: #333;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  border: 1px solid gold;
 }
 .floating-toolbar span {
   font-size: 28px;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
-  padding: 1px 18px;
+  padding: 4px 18px;
   position: relative;
 }
 .floating-toolbar span:hover {
-  background: #000;
-  color: gold;
+  background: #f2f2f2;
+  color: #0b0b78;
 }
 .floating-toolbar-close {
-  color: gold;
-  background: #333;
+  color: #0b0b78;
+  background: #fff;
   top: -15px;
   right: -15px;
   position: absolute;
@@ -140,8 +139,8 @@ ul {
   aspect-ratio: 1;
   width: 40%;
   margin: auto;
-  background: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  background: rgb(173 170 170 / 80%);
+  box-shadow: 0 4px 8px rgb(173 170 170 / 80%);
   padding: 10px;
   border-radius: 20px;
   display: flex;
@@ -178,16 +177,17 @@ ul {
 }
 
 .color-name {
-  color: gray;
+  color: #280f60;
+  margin-top: 5px;
 }
 .btn-submit {
   padding: 14px 36px;
   border-radius: 9px;
-  background: #000;
+  background: #280f60;
   color: #fff;
   font-size: 22px;
   outline: none;
-  border: 1px solid gold;
+  border: 1px solid #280f60;
   margin-bottom: 20px;
   transition: 0.3s all ease;
   cursor: pointer;
@@ -198,7 +198,7 @@ ul {
   color: #000;
 }
 .modal-content h1 {
-  color: gold;
+  color: #0b0b78;
 }
 .comment {
   border: 1px dashed gold;
