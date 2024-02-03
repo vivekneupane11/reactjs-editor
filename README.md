@@ -6,7 +6,11 @@
   <br>
 </h1>
 
+
+
 <h4 align="center">React package to highlight text,make text bold,add comment to text.<a href="https://react-editor-kappa.vercel.app/" target="_blank">View Demo</a>.</h4>
+
+
 
 <p align="center">
 
@@ -18,41 +22,48 @@
   </a>
 </p>
 
-
+---
 
 ![screenshot](https://raw.githubusercontent.com/vivekneupane11/qanuny/main/ScreenRecording2024-02-03at19.15.58-ezgif.com-video-to-gif-converter%20(1).gif)
 
 
-#  Get Started
+---
+
+#  Get Started 👨🏻‍✈️
 
 
 
-### Installation and Setup
+### 🛠️🛠️ Installation and Setup 🌱🌱
+<br>
 
 ```
 $ npm i reactjs-editor
-
 ```
 
-###  <div style="margin-top: 40px;"> 🌟  Note:  ⏭️ Necessary Only For Typescript Project 🌟 </div>
+---
 
-### ⏭️  If your React Project is in Typescript
+
+###  <div style="margin-top: 40px;">  🛠️🛠️ Necessary Only For Typescript Project 🛠️🛠️ </div>
+
+#### ✔ 🛠️🛠️  Only  If your React Project is in Typescript 🛠️🛠️
 
 ```
   $ cd <your typescript project root>
   $ touch reacteditor.d.ts  
   $ nano reacteditor.d.ts
 
-  ## Add this line below and save ⬇️ ⬇️
+  ## Add this line below and save 📝📝
 
   declare module 'reactjs-editor';    //add this line and save
 
+```
 
-  ## Now go to tsconfig.json file 
+```
+  ## Now go to tsconfig.json file 🏃🏃🏃 
   
   $ cd tsconfig.json  
 
-  ## And just include file you created above  
+  ## And just include path to file you created above  ➕➕➕
 
    "include": [
     "src",
@@ -61,15 +72,16 @@ $ npm i reactjs-editor
    ] 
 ```
 
+---
 
 #### <div style="margin-top: 40px;"> 
-🎉🎉 Congratulations Setup Completed  🌟 Lets Create Magic Now  </div> 🌟
+🎉🎉 Congratulations Setup Completed 🥳🥳🥳  <br> <br> 🌟🧙‍♂️🧙‍♂️ Lets Create Magic 🎩🎩🎩 Now  </div> 🌟🧙‍♂️🧙‍♂️
 
 
 
 
 
-# <div style="margin-top: 70px;"> Let's create a magic now </div> 
+# <div style="margin-top: 70px;">🦄✨🧙🏼‍♀️ Let's create a magic now  🦄✨🧙🏼‍♀️ </div> 
 
 
 
@@ -97,16 +109,22 @@ $ import { Editor } from 'reactjs-editor';
 
 ```
 
-
-## <div style="margin-top: 30px;"> 🎉🎉🎉 That's it.   🎉🎉🎉 </div>
-####### 🌟🌟 Go Simran go, live your life 🌟🌟
-
+---
+###  <div style="margin-top: 60px; padding:20px; margin-bottom:20px;border:2px solid yellow;">  <div style="color:red;"> 🚨🚨🚨 Note: ⚠️⚠️  Its important: </div>  <br>🚨🚨🚨 Make sure your htmlContent is wrapped inside main tag <br> <br>  ✅✅✅ <br><br> ` htmlContent={ ` <br>` <main> `<br>`{ *** all your html content here *** }`<br>`</main> `<br>`}` <br> <br> ✅✅✅ </div>
 
 
-####  <div style="margin-top: 60px; padding:20px; margin-bottom:20px;border:2px solid yellow;"> 🌟 Note: ⚠️⚠️  Its important:  <br> <br>🌟 Make sure your htmlContent is wrapped inside main tag <br> <hr>  ` htmlContent={ <main>{ *** all your html content }</main>`  </div>
+# <div style="margin-top: 70px;"> 🎉🎉🎉 That's it.   🎉🎉🎉 </div>
+🚉🚉🚉🚉🚉🚉 GO SIMRAN GO, LIVE YOUR LIFE  🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️
+
+
+
 
 
 # <div style="margin-top:70px;"> Get Access to Changed HTML Element. </div>
+
+### 💾  Save user html changes and show them their changes on subsequent visit
+
+
 
 
 ```
@@ -115,22 +133,46 @@ import { Editor, useDomValue } from 'reactjs-editor';
 
 ...
 
-  const {dom,setDom} = useDomValue()
-   console.log("%j", dom);  //get your changed dom  like this and save it if you like to
- 
-  useEffect(()=>{
-setDom( domObject)  //set your dom like this
-  },[])
+ const { dom, setDom } = useDomValue();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const updatedDomValue  = {
+    key: dom?.key,
+    props: dom?.props,
+    ref: dom?.ref,
+    type: dom?.type,
+  }
+
+
+  console.log("%j", updatedDomValue );  
+  
+  // get your changed dom  like this and save it if you like to in your database or some place
 
 ```
 
+### Update dom using that  " updatedDomValue " values you saved from above
+
+```
+
+useEffect(()=>{
+  function updateDom(updatedDomValue:any){
+   setDom(updatedDomValue); //set your dom like this
+ 
+  }
+  updateDom(updatedDomValue) // call this function where ever you like
+
+},[])
+
+```
+
+---
 
 
-#  <div style="margin-top:80px;"> Additional Features for Customizations </div>
+#  <div style="margin-top:50px;"> Additional Features for Customizations </div>
 
 
 
-## Add your own colors 
+### Add your own colors 
 
 ```
 <Editor
@@ -140,7 +182,7 @@ setDom( domObject)  //set your dom like this
 
 ```
 
-## Then add your class  in your css file
+### Makre sure to add your class  in your css file
 
 ```
 /* In your css file */
@@ -158,7 +200,12 @@ setDom( domObject)  //set your dom like this
     color:#fff,
 }
 
+//add as much as you like
+
 ```
+
+---
+
 
 # <div style="margin-top:70px;"> If you want to customize designs of all other components such as floating button and modals </div>
 
@@ -168,7 +215,7 @@ setDom( domObject)  //set your dom like this
 2. Find className of specific elements
 3. Override css present there from your own css files 
 
- In future update, I will create option to pass all components such as a props
+ In future update, I will create option to pass all components in a props
 
 ```
 
