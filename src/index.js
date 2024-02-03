@@ -1,5 +1,6 @@
 import './style.css';
 
 import ReactEditor from './components';
-
-export default ReactEditor;
+import { useDom } from './customHooks/useDom';
+export const Editor =  ReactEditor;
+export const useDomValue =  useDom;

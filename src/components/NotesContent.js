@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const createComponents = (domElement) => {
     if (domElement == undefined || domElement == null || !Object.keys(domElement).length) {

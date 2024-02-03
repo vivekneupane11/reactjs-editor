@@ -94,11 +94,11 @@ ul {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .floating-toolbar span {
-  font-size: 28px;
   cursor: pointer;
-  transition: 0.2s all ease-in-out;
-  padding: 4px 18px;
+  font-size: 28px;
+  padding: 6px 18px;
   position: relative;
+  transition: all .2s ease-in-out;
 }
 .floating-toolbar span:hover {
   background: #f2f2f2;
@@ -139,8 +139,8 @@ ul {
   aspect-ratio: 1;
   width: 40%;
   margin: auto;
-  background: rgb(173 170 170 / 80%);
-  box-shadow: 0 4px 8px rgb(173 170 170 / 80%);
+  background: hsl(0deg 0% 75.88% / 80%);
+  box-shadow: 0.9px 0px 0px 0.2px hsl(0deg 2.51% 50.25% / 80%);
   padding: 10px;
   border-radius: 20px;
   display: flex;

@@ -29,7 +29,6 @@ export default function useUpdateDom() {
         (domElement, index) => {
           if (!domElement?.type && domElement?.includes(config.selectedText)) {
             specificIndex = index;
-            console.log("yes here it is", domElement, type);
             const elements = domElement.split(config.selectedText);
             let child = {
               type: "span",
