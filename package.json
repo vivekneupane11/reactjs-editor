@@ -1,6 +1,6 @@
 {
   "name": "reactjs-editor",
-  "version": "2.1.1",
+  "version": "2.2.2",
   "description": "A simple react library that lets you highlight text, make text bold, and add comment on any text as a sticky notes",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
