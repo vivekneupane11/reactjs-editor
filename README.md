@@ -43,9 +43,9 @@ $ npm i reactjs-editor
 ---
 
 
-###  <div style="margin-top: 40px;">  🛠️🛠️ Necessary Only For Typescript Project 🛠️🛠️ </div>
+##  <div style="margin-top: 40px;">  ⏭️ ⏭️ Skip this for javascript react project  ⏭️ ⏭️</div>
 
-#### ✔ 🛠️🛠️  Only  If your React Project is in Typescript 🛠️🛠️
+#### ✔ 🛠️🛠️  Necessary Only For Typescript Project 🛠️🛠️
 
 ```
   $ cd <your typescript project root>
@@ -56,12 +56,10 @@ $ npm i reactjs-editor
 
   declare module 'reactjs-editor';    //add this line and save
 
-```
 
-```
-  ## Now go to tsconfig.json file 🏃🏃🏃 
+  ## Now go to tsconfig.json file, you can find it in root of react typescript project 🏃🏃🏃 
   
-  $ cd tsconfig.json  
+  $ nano tsconfig.json  
 
   ## And just include path to file you created above  ➕➕➕
 
@@ -74,8 +72,7 @@ $ npm i reactjs-editor
 
 ---
 
-#### <div style="margin-top: 40px;"> 
-🎉🎉 Congratulations Setup Completed 🥳🥳🥳  <br> <br> 🌟🧙‍♂️🧙‍♂️ Lets Create Magic 🎩🎩🎩 Now  </div> 🌟🧙‍♂️🧙‍♂️
+# 🎉🎉 Congratulations Setup Completed 🥳🥳🥳  
 
 
 
@@ -114,13 +111,55 @@ $ import { Editor } from 'reactjs-editor';
 
 
 # <div style="margin-top: 70px;"> 🎉🎉🎉 That's it.   🎉🎉🎉 </div>
-🚉🚉🚉🚉🚉🚉 GO SIMRAN GO, LIVE YOUR LIFE  🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️
+## 🚉🚉🚉🚉🚉🚉 GO SIMRAN GO, LIVE YOUR LIFE  🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️
 
 
 
 
+
+
+
+#  <div style="margin-top:50px;"> Additional Props for Customizations </div>
+
+
+
+### Add your own colors 
+
+```
+<Editor
+      colors={["black","gold","red"]}
+      ....
+      />
+
+```
+
+### Make sure to add your class  in your css file
+
+```
+/* In your css file */
+
+.black{
+    background-color:#000,
+    color:#fff,
+},
+.red{
+    background-color:red,
+    color:#fff,
+}
+.gold{
+    background-color:gold,
+    color:#fff,
+}
+
+//add as much as you like
+
+```
+
+---
 
 # <div style="margin-top:70px;"> Get Access to Changed HTML Element. </div>
+
+
 
 ### 💾  Save user html changes and show them their changes on subsequent visit
 
@@ -166,46 +205,6 @@ useEffect(()=>{
 ```
 
 ---
-
-
-#  <div style="margin-top:50px;"> Additional Features for Customizations </div>
-
-
-
-### Add your own colors 
-
-```
-<Editor
-      colors={["black","gold","red"]}
-      ....
-      />
-
-```
-
-### Makre sure to add your class  in your css file
-
-```
-/* In your css file */
-
-.black{
-    background-color:#000,
-    color:#fff,
-},
-.red{
-    background-color:red,
-    color:#fff,
-}
-.gold{
-    background-color:gold,
-    color:#fff,
-}
-
-//add as much as you like
-
-```
-
----
-
 
 # <div style="margin-top:70px;"> If you want to customize designs of all other components such as floating button and modals </div>
 
