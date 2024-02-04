@@ -42,37 +42,68 @@ $ npm i reactjs-editor
 
 ---
 
+  ## 🛠️🛠️ [Must have Configurations for Typescript project only]    🛠️🛠️
+  ####  <div style="margin-top: 20px;">  ⏭️ ⏭️ For javascript project, you can skip this section  ⏭️ ⏭️</div>
 
-##  <div style="margin-top: 40px;">  ⏭️ ⏭️ Skip this for javascript react project  ⏭️ ⏭️</div>
 
-#### ✔ 🛠️🛠️  Necessary Only For Typescript Project 🛠️🛠️
+  ### <div style="margin-top:50px;"> In typescript you will probably get this error while trying to import package  </div>
 
-```
+  #### <div style="background:red;padding:10px;color:#fff;">⚠️⚠️⚠️ Could not find a declaration file for module 'reactjs-editor'. ⚠️⚠️⚠️  </div>
+
+
+  #### So we have to setup type declaration support for Typescript and fix that error
+
+
+<details>
+   <summary style="color:blue;font-size:20px;font-weight:bold;font-style:italic; text-decoration:underline;">Click to setup type declaration for Typescript Project</summary>
+  
+  
+  ```
+  -----------------------------  FIRST STEP: -------------------------------
+
+
+  1. Go to your project 
   $ cd <your typescript project root>
+
+  2. Create a new [FILE_NAME].d.ts file 
   $ touch reacteditor.d.ts  
+
+  3. Make change to that file by adding the line below
   $ nano reacteditor.d.ts
 
   ## Add this line below and save 📝📝
 
   declare module 'reactjs-editor';    //add this line and save
-
-
-  ## Now go to tsconfig.json file, you can find it in root of react typescript project 🏃🏃🏃 
   
+  4. Save that file 
+
+ ----------------------------- SECOND STEP: -------------------------------
+
+  1. Now open tsconfig.json file, you can find it in root of react typescript project 🏃🏃🏃 
+  
+  2. Make change to tsconfig.json file by including path to [FILENAME].d.ts file
   $ nano tsconfig.json  
 
   ## And just include path to file you created above  ➕➕➕
 
    "include": [
     "src",
-    "./reacteditor.d.ts"  //Add this line 
+    "./reacteditor.d.ts"  //Add this line and save
     ...
    ] 
 ```
+  
+</details>
+
+
+#### 
+
+
+##### 👩🏿‍🔧👩🏿‍🔧 After this configuration setup, typescript won't show type error 
 
 ---
 
-# 🎉🎉 Congratulations Setup Completed 🥳🥳🥳  
+## 🎉🎉🎉🎉 Congratulations for successful Setup  🥳🥳🥳  
 
 
 
@@ -105,6 +136,9 @@ $ import { Editor } from 'reactjs-editor';
       />
 
 ```
+
+### <div style="margin-top: 70px;"> 🎉🎉🎉 Easy Peasy   🎉🎉🎉 Check it out </div>
+
 
 ---
 ###  <div style="margin-top: 60px; padding:20px; margin-bottom:20px;border:2px solid yellow;">  <div style="color:red;"> 🚨🚨🚨 Note: ⚠️⚠️  Its important: </div>  <br>🚨🚨🚨 Make sure your htmlContent is wrapped inside main tag <br> <br>  ✅✅✅ <br><br> ` htmlContent={ ` <br>` <main> `<br>`{ *** all your html content here *** }`<br>`</main> `<br>`}` <br> <br> ✅✅✅ </div>
