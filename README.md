@@ -39,7 +39,9 @@
 ```
 $ npm i reactjs-editor
 ```
-
+<br>
+<br>
+<br>
 ---
 
   ## 🛠️🛠️ [Must have Configurations for Typescript project only]    🛠️🛠️
@@ -103,10 +105,13 @@ $ npm i reactjs-editor
 
 ---
 
+<br>
+
 ## 🎉🎉🎉🎉 Congratulations for successful Setup  🥳🥳🥳  
 
 
-
+<br>
+<br><br><br>
 
 
 # <div style="margin-top: 70px;">🦄✨🧙🏼‍♀️ Let's create a magic now  🦄✨🧙🏼‍♀️ </div> 
@@ -139,15 +144,16 @@ $ import { Editor } from 'reactjs-editor';
 
 ### <div style="margin-top: 70px;"> 🎉🎉🎉 Easy Peasy   🎉🎉🎉 Check it out </div>
 
+<br><br><br><br>
 
 ---
 ###  <div style="margin-top: 60px; padding:20px; margin-bottom:20px;border:2px solid yellow;">  <div style="color:red;"> 🚨🚨🚨 Note: ⚠️⚠️  Its important: </div>  <br>🚨🚨🚨 Make sure your htmlContent is wrapped inside main tag <br> <br>  ✅✅✅ <br><br> ` htmlContent={ ` <br>` <main> `<br>`{ *** all your html content here *** }`<br>`</main> `<br>`}` <br> <br> ✅✅✅ </div>
 
+<br>
 
 # <div style="margin-top: 70px;"> 🎉🎉🎉 That's it.   🎉🎉🎉 </div>
-## 🚉🚉🚉🚉🚉🚉 GO SIMRAN GO, LIVE YOUR LIFE  🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️🏃🏻‍♀️
 
-
+<br><br><br><br>
 
 
 
@@ -190,6 +196,8 @@ $ import { Editor } from 'reactjs-editor';
 ```
 
 ---
+
+<br><br><br><br>
 
 # <div style="margin-top:70px;"> Get Access to Changed HTML Element. </div>
 
@@ -239,6 +247,7 @@ useEffect(()=>{
 ```
 
 ---
+<br><br><br><br>
 
 # <div style="margin-top:70px;"> If you want to customize designs of all other components such as floating button and modals </div>
 
