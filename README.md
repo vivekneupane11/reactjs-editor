@@ -39,24 +39,24 @@
 ```
 $ npm i reactjs-editor
 ```
+
 <br>
+
+ 
+  ###  <div style="margin-top: 20px;">  ⏭️ ⏭️ For javascript project. Your setup is successful</div>
+  ###  🦄✨🧙🏼‍♀️ Go see USAGE section directly 
 <br>
----
 
-  ## 🛠️🛠️ [Must have Configurations for Typescript project only]    🛠️🛠️
-  ####  <div style="margin-top: 20px;">  ⏭️ ⏭️ For javascript project, you can skip this section  ⏭️ ⏭️</div>
+  ## <div style="margin-top:50px;">However in typescript you will probably get this error while trying to import package  </div>
 
+  ### <div style="background:red;padding:10px;color:#fff;">⚠️⚠️⚠️ Could not find a declaration file for module 'reactjs-editor'. ⚠️⚠️⚠️  </div>
 
-  ### <div style="margin-top:50px;"> In typescript you will probably get this error while trying to import package  </div>
+<br>
+  ## So we have to setup type declaration support for Typescript and fix that error
 
-  #### <div style="background:red;padding:10px;color:#fff;">⚠️⚠️⚠️ Could not find a declaration file for module 'reactjs-editor'. ⚠️⚠️⚠️  </div>
-
-
-  #### So we have to setup type declaration support for Typescript and fix that error
-
-
+<br>
 <details>
-   <summary style="color:blue;font-size:20px;font-weight:bold;font-style:italic; text-decoration:underline;">Click to setup type declaration for Typescript Project</summary>
+   <summary style="color:blue;font-size:36px;font-weight:bold;font-style:italic; text-decoration:underline;"> ⬇️ ⬇️ ⬇️ CLICK TO SETUP TYPE DECLARATION FOR TYPESCRIPT PROJECT</summary>
   
   
   ```
@@ -105,15 +105,10 @@ $ npm i reactjs-editor
 ---
 
 <br>
-
-## 🎉🎉🎉🎉 Congratulations for successful Setup  🥳🥳🥳  
-
-
-<br>
 <br>
 
 
-# <div style="margin-top: 70px;">🦄✨🧙🏼‍♀️ Let's create a magic now  🦄✨🧙🏼‍♀️ </div> 
+# <div style="margin-top: 70px;">🦄✨🧙🏼‍♀️ USAGE  🦄✨🧙🏼‍♀️ </div> 
 
 
 
