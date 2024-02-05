@@ -1,9 +1,11 @@
 {
   "name": "reactjs-editor",
-  "version": "6.6.6",
+  "version": "6.6.8",
   "description": "A simple react library that lets you highlight text, make text bold, and add comment on any text as a sticky notes",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "typings": "typings/reactjs-editor.d.ts",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-lib": "rollup -c"

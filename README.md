@@ -40,56 +40,8 @@
 $ npm i reactjs-editor
 ```
 
-<br>
-
- 
-  ###  <div style="margin-top: 20px;">  ⏭️ ⏭️ For javascript project. Your setup is successful</div>
-  ###  🦄✨🧙🏼‍♀️ Go see USAGE section directly 
-<br>
-
-  ## <div style="margin-top:50px;">However in typescript you will probably get this error while trying to import package  </div>
-
-  ### <div style="background:red;padding:10px;color:#fff;">⚠️⚠️⚠️ Could not find a declaration file for module 'reactjs-editor'. ⚠️⚠️⚠️  </div>
-
-<br>
-<br>
-<details>
-   <summary style="color:blue;font-size:36px;font-weight:bold;font-style:italic; text-decoration:underline;"> ⬇️ ⬇️ ⬇️ CLICK TO FIX TYPE DECLARATION ERROR</summary>
-  
-  
-  ```
-  -----------------------------  FIRST STEP: -------------------------------
-
-
-  1. Create a new file reacteditor.d.ts  in project root directory
-
-  2. Add this line below in the file  📝📝
-
-  declare module 'reactjs-editor';    //add this line and save
-  
-
- ----------------------------- SECOND STEP: -------------------------------
-
-  1. Now open tsconfig.json file and just include path ➕➕➕
-
-   "include": [
-    "src",
-    "./reacteditor.d.ts"  //Add this line and save
-    ...
-   ] 
-```
-  
-</details>
-
-
-#### 
-
-
-#### 👩🏿‍🔧👩🏿‍🔧 After this configuration setup, typescript won't show type error 
-
 ---
 
-<br>
 <br>
 
 
