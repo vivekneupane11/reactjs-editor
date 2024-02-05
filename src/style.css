@@ -5,35 +5,14 @@
 
 
 
-.comments-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
-}
+
 
 .comment {
   margin-bottom: 1rem;
 }
 
-.comment-author {
-  font-weight: bold;
-}
 
-/* Different Paragraph Styles */
 
-.left-right {
-  float: left;
-  width: 45%;
-  margin: 2% 2.5% 1rem 0;
-  padding: 1rem;
-}
-
-.top-bottom {
-  clear: both;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 
 
 
@@ -82,7 +61,7 @@
   scale: 1.1;
 }
 
-.modal-container {
+.modal-container-reed {
   height: 100vh;
   width: 100vw;
   background: rgb(0, 0, 0, 0.5);
@@ -94,7 +73,7 @@
   justify-content: center;
   align-items: center;
 }
-.modal-content {
+.modal-content-reed {
   aspect-ratio: 1;
   width: 40%;
   margin: auto;
@@ -107,7 +86,7 @@
   justify-content: center;
   align-items: center;
 }
-.container {
+.container-reed {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
@@ -115,7 +94,7 @@
   justify-content: center;
   align-items: center;
 }
-.color-container {
+.color-container-reed {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -139,7 +118,7 @@
   color: #280f60;
   margin-top: 5px;
 }
-.btn-submit {
+.btn-submit-reed {
   padding: 14px 36px;
   border-radius: 9px;
   background: #280f60;
@@ -152,10 +131,10 @@
   cursor: pointer;
   font-family: "Times New Roman", Times, serif;
 }
-.btn-submit:hover {
+.btn-submit-reed:hover {
   background: #482696;
 }
-.modal-content h1 {
+.modal-content-reed h1 {
   color: #0b0b78;
 }
 .comment {
@@ -215,7 +194,7 @@
   color:'#fff'
 }
 
-.text-shadow {
+.text-shadow-reed {
   text-shadow: 0.1px 0.1px #000;
   font-weight: "bolder";
 }

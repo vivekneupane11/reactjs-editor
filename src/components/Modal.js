@@ -21,13 +21,13 @@ export default function Modal(props) {
     changeType({ name: "highlight", value: colorName });
   };
   return (
-    <section className="modal-container">
-      <div className="modal-content">
+    <section className="modal-container-reed">
+      <div className="modal-content-reed">
         <h1>Pick your color</h1>
 
-        <div className="container">
+        <div className="container-reed">
           {allColors.map((color) => (
-            <span className="color-container" key={color}>
+            <span className="color-container-reed" key={color}>
               <div
                 className="color-box"
                 onClick={() => chooseColor(color)}

@@ -60,7 +60,7 @@ export default function useUpdateDom() {
                               },
                             ]
                           : [config.selectedText],
-                      className: `text-shadow ${type.name} ${
+                      className: `text-shadow-reed ${type.name} ${
                         type.value ? type.value : ""
                       } `,
                     },

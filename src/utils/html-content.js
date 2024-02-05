@@ -48,7 +48,7 @@ export const htmlJson = convert(`
     </p>
 </div>
 </div>
-<div class="comments-section">
+<div class="comments-section-reed">
 <h3>Comments</h3>
 <div class="comment">
     <p class="comment-author">John Doe</p>

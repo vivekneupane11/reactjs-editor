@@ -28,8 +28,8 @@ export default function CommentModal() {
   };
 
   return (
-    <section className="modal-container">
-      <div className="modal-content">
+    <section className="modal-container-reed">
+      <div className="modal-content-reed">
         <h1>Add Your Notes</h1>
         <textarea
           onChange={addNotes}
@@ -38,7 +38,7 @@ export default function CommentModal() {
         />
         <button
           onClick={() => submitNote()}
-          className="btn-submit"
+          className="btn-submit-reed"
         >
           Add Note
         </button>
