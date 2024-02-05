@@ -75,10 +75,10 @@ $ import { Editor } from 'reactjs-editor';
 
 ### <div style="margin-top: 70px;"> 🎉🎉🎉 Easy Peasy   🎉🎉🎉 Check it out </div>
 
-<br><br>
 
 ---
-###  <div style="margin-top: 60px; padding:20px; margin-bottom:20px;border:2px solid yellow;">  <div style="color:red;"> 🚨🚨🚨 Note: ⚠️⚠️  Its important: </div>  <br>🚨🚨🚨 Make sure your htmlContent is wrapped inside main tag <br> <br>  ✅✅✅ <br><br> ` htmlContent={ ` <br>` <main> `<br>`{ *** all your html content here *** }`<br>`</main> `<br>`}` <br> <br> ✅✅✅ </div>
+<br>
+#  <div style="margin-top: 60px; padding:20px; margin-bottom:20px;border:2px solid yellow;">  <div style="color:red;"> 🚨🚨🚨 Note: ⚠️⚠️  Its important: </div>  <br>🚨🚨🚨 Make sure your htmlContent is wrapped inside main tag <br> <br>  ✅✅✅ <br><br> ` htmlContent={ ` <br>` <main> `<br>`{ *** all your html content here *** }`<br>`</main> `<br>`}` <br> <br> ✅✅✅ </div>
 
 <br>
 
