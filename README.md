@@ -195,11 +195,19 @@ useEffect(()=>{
  In future update, I will create option to pass all components in a props
 
 ```
+<br><br>
 
-## Support
+# Support
+
 
 <a href="https://www.buymeacoffee.com/vivekneupaw" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
+<br>
+
+### ✉️ Drop any of your queries/feedback in this gmail. 
+## ✉️✉️  Gmail: vivekneupane11@gmail.com
+
+<br> <br>
 
 ## License
 
@@ -208,4 +216,7 @@ MIT
 ---
 
 > [vivekneupane11@gmail.com](https://portfolio-seven-phi-43.vercel.app/) &nbsp;&middot;&nbsp;
-> GitHub [@vivekneupane11](https://github.com/vivekneupane11) &nbsp;&middot;&nbsp;
+> LinkedIn [@vivekneupane11](https://www.linkedin.com/in/vivek-neupane-b99259194/) &nbsp;&middot;&nbsp;
+> Youtube [@vivekneupane11](https://www.youtube.com/channel/UCJoQhaR1_Gx8dpeZdrCCXsg) &nbsp;&middot;&nbsp;
+>  GitHub [@vivekneupane11](https://github.com/vivekneupane11) &nbsp;&middot;&nbsp;
+
