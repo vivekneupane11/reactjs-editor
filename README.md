@@ -52,22 +52,18 @@ $ npm i reactjs-editor
   ### <div style="background:red;padding:10px;color:#fff;">⚠️⚠️⚠️ Could not find a declaration file for module 'reactjs-editor'. ⚠️⚠️⚠️  </div>
 
 <br>
-  ## So we have to setup type declaration support for Typescript and fix that error
-
 <br>
 <details>
-   <summary style="color:blue;font-size:36px;font-weight:bold;font-style:italic; text-decoration:underline;"> ⬇️ ⬇️ ⬇️ CLICK TO SETUP TYPE DECLARATION FOR TYPESCRIPT PROJECT</summary>
+   <summary style="color:blue;font-size:36px;font-weight:bold;font-style:italic; text-decoration:underline;"> ⬇️ ⬇️ ⬇️ CLICK TO FIX TYPE DECLARATION ERROR</summary>
   
   
   ```
   -----------------------------  FIRST STEP: -------------------------------
 
 
-  1. Go to your project root
+  1. Create a new file reacteditor.d.ts  in project root directory
 
-  2. Create a new [FILE_NAME].d.ts file 
-
-  3. Add this line below in the file  📝📝
+  2. Add this line below in the file  📝📝
 
   declare module 'reactjs-editor';    //add this line and save
   
