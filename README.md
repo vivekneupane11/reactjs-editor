@@ -63,29 +63,18 @@ $ npm i reactjs-editor
   -----------------------------  FIRST STEP: -------------------------------
 
 
-  1. Go to your project 
-  $ cd <your typescript project root>
+  1. Go to your project root
 
   2. Create a new [FILE_NAME].d.ts file 
-  $ touch reacteditor.d.ts  
 
-  3. Make change to that file by adding the line below
-  $ nano reacteditor.d.ts
-
-  ## Add this line below and save 📝📝
+  3. Add this line below in the file  📝📝
 
   declare module 'reactjs-editor';    //add this line and save
   
-  4. Save that file 
 
  ----------------------------- SECOND STEP: -------------------------------
 
-  1. Now open tsconfig.json file, you can find it in root of react typescript project 🏃🏃🏃 
-  
-  2. Make change to tsconfig.json file by including path to [FILENAME].d.ts file
-  $ nano tsconfig.json  
-
-  ## And just include path to file you created above  ➕➕➕
+  1. Now open tsconfig.json file and just include path ➕➕➕
 
    "include": [
     "src",
@@ -100,7 +89,7 @@ $ npm i reactjs-editor
 #### 
 
 
-##### 👩🏿‍🔧👩🏿‍🔧 After this configuration setup, typescript won't show type error 
+#### 👩🏿‍🔧👩🏿‍🔧 After this configuration setup, typescript won't show type error 
 
 ---
 
