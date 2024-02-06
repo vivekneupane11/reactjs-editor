@@ -61,25 +61,27 @@ $ import { Editor } from 'reactjs-editor';
 
 
 ```
+
 <Editor
-    htmlContent={`<main>
-    <div style="border-radius:30px;width:50%;padding:30px; margin:40px auto; box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
-    <h1 style="color:blue;">Select Text Below and See the Magic</h1>
-    <div style="display:flex;">
-    <aside>
-        <p style="padding:10px;text-align:left;color:#000;line-height:25px;">
-        You can select any text and add comments.You can make text bold. You can use any text using color you choose.These are the feature of React Editor. You can highlight that React Editor if you want to. 
-      </p>
-    </aside>
-    <aside>
-        <p style="padding:10px;text-align:left;color:#000;line-height:25px;">
-        HTML and CSS are fundamental tools in web development, enabling the creation of visually appealing and structured web pages.Tag in HTML is used to define paragraphs, allowing content to be organized into distinct blocks of text.
-        </p>
-      </aside>
-    </div>
-    <div>
-    </main>`}
-/>
+        /** htmlContent accepts only one element. Just wrap everything on one element **/
+        htmlContent={`<main>
+                      <div style="border-radius:30px;width:50%;padding:30px; margin:40px auto; box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
+                      <h1 style="color:blue;">Select Text Below and See the Magic</h1>
+                      <div style="display:flex;">
+                      <aside>
+                          <p style="padding:10px;text-align:left;color:#000;line-height:25px;">
+                          You can select any text and add comments.You can make text bold. You can use any text using color you choose.These are the feature of React Editor. You can highlight that React Editor if you want to. 
+                        </p>
+                      </aside>
+                      <aside>
+                          <p style="padding:10px;text-align:left;color:#000;line-height:25px;">
+                          HTML and CSS are fundamental tools in web development, enabling the creation of visually appealing and structured web pages.Tag in HTML is used to define paragraphs, allowing content to be organized into distinct blocks of text.
+                          </p>
+                        </aside>
+                      </div>
+                </main>`
+              }
+      />
 
 ```
 
