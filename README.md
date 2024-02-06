@@ -62,12 +62,21 @@ $ import { Editor } from 'reactjs-editor';
 
 ```
    <Editor
-        htmlContent={`<main> 
-          <h1>Welcome to My Website</h1>
-          <p>This is a paragraph of text in HTML. It's simple and easy to create.</p>
-          <p>HTML stands for HyperText Markup Language. It's the standard markup language for  creating web pages.</p>
-          <p>In HTML, you can create different types of elements such as headings, paragraphs, links, lists, and more to structure and format your content.</p>
-         </main>`}
+        htmlContent={`<main>
+        <div style="border-radius:30px;width:50%;padding:30px; margin:40px auto; box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
+        <h1 style="color:blue;">Select any Text Below</h1>
+        <div style="display:flex;">
+           <p style="padding:10px;text-align:left;color:#000;line-height:25px;">
+              You can select any text and add comments. You can make text bold. Tou can highlight any
+              text using color you choose. These are the feature of React Editor. You ca highlight that React Editor text if you want to. 
+           </p>
+           <p style="padding:10px;text-align:left;color:#000;line-height:25px;">
+              You can add inline styles or class names as well. Tou can highlight any
+              text using color you choose. These are the feature of React Editor. You ca highlight that React Editor text if you want to. 
+           </p>
+        </div>
+        <div>
+     </main>`}
       />
 
 ```
