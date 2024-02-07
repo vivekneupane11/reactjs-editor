@@ -8,6 +8,7 @@ export default function FloatingToolBar({ x, y }) {
   const [open, setOpen] = useState(true);
   const changeType = useEditor(state=>state.changeType)
   const {addBold} = useUpdateDom()
+
   const closeMenu = () => setOpen(!open);
   const toggleModal = useModal(state=>state.toggleModal)
   const toggleCommentModal = useCommentModal(state=>state.toggleCommentModal)
@@ -39,7 +40,7 @@ if(type.name === 'bold' && config.selectedText){
   }, [x]);
   return (
     <>
-      {open && x ? (
+      {open && config.selectedText && x ? (
         <section
           style={{ left: `${x-100}px`, top: `${y+10}px`, position: "absolute" }}
         >

@@ -29,44 +29,53 @@ export default function useUpdateDom() {
         (domElement, index) => {
           if (!domElement?.type && domElement?.includes(config.selectedText)) {
             specificIndex = index;
+            console.log("yes here it is", domElement, type);
             const elements = domElement.split(config.selectedText);
+            console.log(elements)
+            let Childrens = []
+            elements.forEach((element,index) => {
+              if(index === elements.length-1){
+               Childrens.push(element)
+              }
+              else{
+               Childrens.push(element)
+               Childrens.push(   {
+                 type: "span",
+                 props: {
+                   children:
+                     type.name === "comment"
+                       ? [
+                           config.selectedText,
+                           {
+                             type: "section",
+                             props: {
+                               className: "hover-card",
+                               children: [
+                                 {
+                                   type: "span",
+                                   props: {
+                                     className: "hover-title",
+                                     children: [config.selectedText],
+                                   },
+                                 },
+                                 type.value,
+                               ],
+                             },
+                           },
+                         ]
+                       : [config.selectedText],
+                   className: `text-shadow-reed ${type.name} ${
+                     type.value ? type.value : ""
+                   } `,
+                 },
+               },)
+              }
+                
+             })
             let child = {
               type: "span",
               props: {
-                children: [
-                  elements[0],
-                  {
-                    type: "span",
-                    props: {
-                      children:
-                        type.name === "comment"
-                          ? [
-                              config.selectedText,
-                              {
-                                type: "section",
-                                props: {
-                                  className: "hover-card",
-                                  children: [
-                                    {
-                                      type: "span",
-                                      props: {
-                                        className: "hover-title",
-                                        children: [config.selectedText],
-                                      },
-                                    },
-                                    type.value,
-                                  ],
-                                },
-                              },
-                            ]
-                          : [config.selectedText],
-                      className: `text-shadow-reed ${type.name} ${
-                        type.value ? type.value : ""
-                      } `,
-                    },
-                  },
-                  elements[1],
-                ],
+                children: Childrens
               },
             };
             let newChildren = domEle?.props?.children;
@@ -92,6 +101,7 @@ export default function useUpdateDom() {
       config.selectedText &&
       config.xPath
     ) {
+      
       let updatedDom = updateDom(dom, "");
       const newDom = Object.create(updatedDom);
       setDom(newDom);
