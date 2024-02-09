@@ -18,7 +18,7 @@ const ReactEditor = (props) => {
   useEffect(()=>{
   
 if(!dom){
-  const htmlJson = convert(props.htmlContent)
+  const htmlJson = convert(props.htmlContent.replace(/\s+/g, ' '))
   setDom({...htmlJson})
 }
   },[dom,setDom,props])
