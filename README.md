@@ -8,7 +8,7 @@
 
 
 
-<h4 align="center">React package to highlight text,make text bold,add comment to text.<a href="https://react-editor-kappa.vercel.app/" target="_blank">View Demo</a>.</h4>
+<h2 align="center">React package to highlight text,make text bold,add comment to text.<br><a href="https://reactjs-editor-demo.vercel.app/" target="_blank">View Demo</a>.</h4>
 
 
 
@@ -24,8 +24,14 @@
 
 ---
 
-![screenshot](https://raw.githubusercontent.com/vivekneupane11/qanuny/main/ScreenRecording2024-02-03at19.15.58-ezgif.com-video-to-gif-converter%20(1).gif)
+![screenshot](https://raw.githubusercontent.com/vivekneupane11/demo/main/Screenshot%202024-02-10%20at%2000.35.34.png)
+ 
+ ---
+ 
+ ### [▶️ ▶️ Watch the video and see how to use it [TUTORIAL VIDEO] 🎥](https://www.youtube.com/watch?v=iR4xtbGtoU0)
+---
 
+###  <a href="https://reactjs-editor-demo.vercel.app/" target="_blank">View Demo Here [!! DEMO DEMO DEMO !!]</a>
 
 ---
 
