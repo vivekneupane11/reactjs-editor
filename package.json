@@ -1,6 +1,6 @@
 {
   "name": "reactjs-editor",
-  "version": "8.8.4",
+  "version": "9.9.9",
   "description": "A simple react library that lets you highlight text, make text bold, and add comment on any text as a sticky notes",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,6 +18,11 @@
   ],
   "author": "Vivek Neupane",
   "license": "MIT",
+  "homepage": "https://github.com/vivekneupane11/reactjs-editor/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivekneupane11/reactjs-editor.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-react": "^7.23.3",
