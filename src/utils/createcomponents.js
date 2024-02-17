@@ -21,9 +21,9 @@ export  const createComponents = (domElement) => {
   
     let tagName = domElement?.type?.toLowerCase();
   
-    return React.createElement(
-      tagName,
+    return tagName? React.createElement(
+      tagName || '',
       properties,
       children.length > 0 ? children : null
-    );
+    ):null;
   };

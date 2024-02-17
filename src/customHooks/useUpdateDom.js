@@ -29,9 +29,7 @@ export default function useUpdateDom() {
         (domElement, index) => {
           if (!domElement?.type && domElement?.includes(config.selectedText)) {
             specificIndex = index;
-            console.log("yes here it is", domElement, type);
             const elements = domElement.split(config.selectedText);
-            console.log(elements)
             let Childrens = []
             elements.forEach((element,index) => {
               if(index === elements.length-1){
@@ -47,7 +45,7 @@ export default function useUpdateDom() {
                        ? [
                            config.selectedText,
                            {
-                             type: "section",
+                             type: "span",
                              props: {
                                className: "hover-card",
                                children: [
