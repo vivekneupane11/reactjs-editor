@@ -31,45 +31,44 @@ export default function useUpdateDom() {
             specificIndex = index;
             const elements = domElement.split(config.selectedText);
             let Childrens = []
-            elements.forEach((element,index) => {
-              if(index === elements.length-1){
-               Childrens.push(element)
+            elements.forEach((element, index) => {
+              if (index === elements.length - 1) {
+                Childrens.push(element)
               }
-              else{
-               Childrens.push(element)
-               Childrens.push(   {
-                 type: "span",
-                 props: {
-                   children:
-                     type.name === "comment"
-                       ? [
-                           config.selectedText,
-                           {
-                             type: "span",
-                             props: {
-                               className: "hover-card",
-                               children: [
-                                 {
-                                   type: "span",
-                                   props: {
-                                     className: "hover-title",
-                                     children: [config.selectedText],
-                                   },
-                                 },
-                                 type.value,
-                               ],
-                             },
-                           },
-                         ]
-                       : [config.selectedText],
-                   className: `text-shadow-reed ${type.name} ${
-                     type.value ? type.value : ""
-                   } `,
-                 },
-               },)
+              else {
+                Childrens.push(element)
+                Childrens.push({
+                  type: "span",
+                  props: {
+                    children:
+                      type.name === "comment"
+                        ? [
+                          config.selectedText,
+                          {
+                            type: "span",
+                            props: {
+                              className: "hover-card",
+                              children: [
+                                {
+                                  type: "span",
+                                  props: {
+                                    className: "hover-title",
+                                    children: [config.selectedText],
+                                  },
+                                },
+                                type.value,
+                              ],
+                            },
+                          },
+                        ]
+                        : [config.selectedText],
+                    className: `text-shadow-reed ${type.name} ${type.value ? type.value : ""
+                      } `,
+                  },
+                },)
               }
-                
-             })
+
+            })
             let child = {
               type: "span",
               props: {
@@ -99,7 +98,7 @@ export default function useUpdateDom() {
       config.selectedText &&
       config.xPath
     ) {
-      
+
       let updatedDom = updateDom(dom, "");
       const newDom = Object.create(updatedDom);
       setDom(newDom);
@@ -111,6 +110,25 @@ export default function useUpdateDom() {
 
   const addBold = () => {
     if (type.name === "bold" && config.selectedText && config.xPath) {
+      let updatedDom = updateDom(dom, "");
+      const newDom = Object.create(updatedDom);
+      setDom(newDom);
+      changeConfig({ xPath: "", selectedText: "" });
+      changeType({ name: "", value: "" });
+    }
+  };
+
+  const addItalic = () => {
+    if (type.name === "italic" && config.selectedText && config.xPath) {
+      let updatedDom = updateDom(dom, "");
+      const newDom = Object.create(updatedDom);
+      setDom(newDom);
+      changeConfig({ xPath: "", selectedText: "" });
+      changeType({ name: "", value: "" });
+    }
+  };
+  const addUnderline = () => {
+    if (type.name === "underline" && config.selectedText && config.xPath) {
       let updatedDom = updateDom(dom, "");
       const newDom = Object.create(updatedDom);
       setDom(newDom);
@@ -130,6 +148,8 @@ export default function useUpdateDom() {
 
   return {
     addBold,
+    addItalic,
+    addUnderline,
     addComment,
     addHighlight,
   };

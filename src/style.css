@@ -37,6 +37,10 @@
   position: relative;
   transition: all .2s ease-in-out;
   color:#000;
+  border-right: 1px solid rgb(83, 82, 82);
+}
+.floating-toolbar span:last-child {
+  border-right: none;
 }
 .floating-toolbar span:hover {
   background: #f2f2f2;
@@ -204,6 +208,12 @@
 .bold {
   font-weight: bold;
   letter-spacing: 1;
+}
+.italic {
+  font-style: italic;
+}
+.underline{
+  text-decoration: underline;
 }
 .highlight {
   border-radius: 4px;

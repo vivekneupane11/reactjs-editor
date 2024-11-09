@@ -6,47 +6,87 @@ import useUpdateDom from "../customHooks/useUpdateDom";
 
 export default function FloatingToolBar({ x, y }) {
   const [open, setOpen] = useState(true);
-  const changeType = useEditor(state=>state.changeType)
-  const {addBold} = useUpdateDom()
+  const changeType = useEditor(state => state.changeType)
+  const { addBold, addItalic, addUnderline } = useUpdateDom()
 
   const closeMenu = () => setOpen(!open);
-  const toggleModal = useModal(state=>state.toggleModal)
-  const toggleCommentModal = useCommentModal(state=>state.toggleCommentModal)
+  const toggleModal = useModal(state => state.toggleModal)
+  const toggleCommentModal = useCommentModal(state => state.toggleCommentModal)
 
   const type = useEditor((state) => state.type);
   const config = useEditor((state) => state.config);
 
-  const openModal = ({name,value}) => {
+  const openModal = ({ name, value }) => {
 
 
-    changeType({name,value})
-    if(name === 'bold') return;
-    if(name === 'comment'){
+    changeType({ name, value })
+    if (name === 'bold') return;
+    if (name === 'italic') return;
+    if (name === 'underline') return;
+    if (name === 'comment') {
       toggleCommentModal()
     }
-    else{
+    else {
       toggleModal()
 
     }
 
   }
-useEffect(()=>{
-if(type.name === 'bold' && config.selectedText){
-  addBold();
-} 
-},[type.name,addBold])
   useEffect(() => {
-     setOpen(true);
+    if (type.name === 'bold' && config.selectedText) {
+      addBold();
+    }
+    if (type.name === 'italic' && config.selectedText) {
+      addItalic();
+    }
+    if (type.name === 'underline' && config.selectedText) {
+      addUnderline();
+    }
+  }, [type.name, addBold, addItalic, addUnderline])
+  useEffect(() => {
+    setOpen(true);
   }, [x]);
   return (
     <>
       {open && config.selectedText && x ? (
         <section
-          style={{ left: `${x-100}px`, top: `${y+10}px`, position: "absolute" }}
+          style={{ left: `${x - 100}px`, top: `${y + 10}px`, position: "absolute" }}
         >
           <div className="floating-toolbar">
-            <span onClick={()=>openModal({name:'bold'})} >B</span>
-            <span onClick={()=>openModal({name:'highlight'})}>
+            <span onClick={() => openModal({ name: 'bold' })} >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height={"20px"}
+                width={"20px"}
+                fill="#000000"
+                viewBox="0 -960 960 960"
+              >
+                <path d="M272-200v-560h221q65 0 120 40t55 111q0 51-23 78.5T602-491q25 11 55.5 41t30.5 90q0 89-65 124.5T501-200H272Zm121-112h104q48 0 58.5-24.5T566-372q0-11-10.5-35.5T494-432H393v120Zm0-228h93q33 0 48-17t15-38q0-24-17-39t-44-15h-95v109Z" />
+              </svg>
+            </span>
+            <span onClick={() => openModal({ name: 'italic' })}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height={"20px"}
+                width={"20px"}
+                fill="#000000"
+                viewBox="0 -960 960 960"
+              >
+                <path d="M200-200v-100h160l120-360H320v-100h400v100H580L460-300h140v100H200Z" />
+              </svg>
+            </span>
+            <span onClick={() => openModal({ name: 'underline' })}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height={"20px"}
+                width={"20px"}
+                fill="#000000"
+                viewBox="0 -960 960 960"
+              >
+                <path d="M200-120v-80h560v80H200Zm280-160q-101 0-157-63t-56-167v-330h103v336q0 56 28 91t82 35q54 0 82-35t28-91v-336h103v330q0 104-56 167t-157 63Z" />
+              </svg>
+            </span>
+            <span onClick={() => openModal({ name: 'highlight' })}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -63,7 +103,7 @@ if(type.name === 'bold' && config.selectedText){
                 />
               </svg>
             </span>
-            <span onClick={()=>openModal({name:'comment'})} >
+            <span onClick={() => openModal({ name: 'comment' })} >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
