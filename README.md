@@ -31,7 +31,7 @@
  ### [▶️ ▶️ Watch the video and see how to use it [TUTORIAL VIDEO] 🎥](https://www.youtube.com/watch?v=iR4xtbGtoU0)
 ---
 
-###  <a href="https://reactjs-editor-demo.vercel.app/" target="_blank">View Demo Here [!! DEMO DEMO DEMO !!]</a>
+###  <a href="https://my-react-app-neon-tau.vercel.app/" target="_blank">View Demo Here [!! DEMO DEMO DEMO !!]</a>
 
 ---
 
