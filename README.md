@@ -47,6 +47,57 @@ function App() {
 }
 ```
 
+## Persisting User Changes
+
+When users highlight text, add comments, or bold content, you can **save those changes** and restore them on their next visit. Use the `useDomValue` hook to get the modified HTML and store it anywhere (database, localStorage, etc.).
+
+#### Save changes
+
+```jsx
+import { Editor, useDomValue } from 'reactjs-editor';
+
+function App() {
+  const { dom } = useDomValue();
+
+  const handleSave = () => {
+    // dom contains the modified HTML with all user highlights & comments
+    const snapshot = { key: dom?.key, props: dom?.props, ref: dom?.ref, type: dom?.type };
+    // Save to your database, localStorage, or any storage
+    localStorage.setItem('editorContent', JSON.stringify(snapshot));
+  };
+
+  return (
+    <>
+      <Editor htmlContent={`<p>Select any text and see the magic.</p>`} colors={colors} />
+      <button onClick={handleSave}>Save</button>
+    </>
+  );
+}
+```
+
+#### Restore changes on next visit
+
+```jsx
+import { Editor, useDomValue } from 'reactjs-editor';
+
+function App() {
+  const { setDom } = useDomValue();
+
+  useEffect(() => {
+    const saved = localStorage.getItem('editorContent');
+    if (saved) {
+      setDom(JSON.parse(saved)); // restores highlights, comments, and bold text
+    }
+  }, []);
+
+  return <Editor htmlContent={`<p>Select any text and see the magic.</p>`} colors={colors} />;
+}
+```
+
+This way, your users' edits persist across sessions — they won't lose their highlights or comments.
+
+---
+
 ## Highlight CSS Classes
 
 Add these classes to your stylesheet so highlighted text is readable on each background:
