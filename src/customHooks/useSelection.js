@@ -18,14 +18,22 @@ export default function useSelection() {
         document.getSelection().getRangeAt(0),
         editorRef.current
       );
-      const xPaths = xPath.start.split("/").filter((e) => e)
-      const [removedMain,...remainingPaths] = xPaths;
-      changeConfig({ xPath: remainingPaths, selectedText: text });
+      const startPaths = xPath.start.split("/").filter((e) => e);
+      const [,...startPath] = startPaths;
+      const endPaths = xPath.end.split("/").filter((e) => e);
+      const [,...endPath] = endPaths;
+      changeConfig({
+        startPath,
+        startOffset: xPath.startOffset,
+        endPath,
+        endOffset: xPath.endOffset,
+        selectedText: text
+      });
      }
      catch(err){
       // console.log("Selecting outside htmlContent won't work")
      }
-   
+
     },
     [changeConfig]
   );

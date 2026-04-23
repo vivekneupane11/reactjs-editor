@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useCommentModal from "../customHooks/useCommentModal";
 import { useEditor } from "../customHooks/useEditor";
 import useUpdateDom from "../customHooks/useUpdateDom";
+
 export default function CommentModal() {
   const [note, setNote] = useState("");
   const changeType = useEditor((state) => state.changeType);
@@ -12,6 +13,7 @@ export default function CommentModal() {
     (state) => state.toggleCommentModal
   );
   const { addComment } = useUpdateDom();
+
   useEffect(() => {
     if (type.name && type.value) {
       addComment();
@@ -20,53 +22,58 @@ export default function CommentModal() {
   }, [type.name, type.value, addComment, toggleCommentModal]);
 
   const submitNote = () => {
-    let text = note; 
-     changeType({ name:'comment', value:text });
+    if (!note.trim()) return;
+    changeType({ name: "comment", value: note });
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+      submitNote();
+    }
+  };
+
   const addNotes = (e) => {
     e.preventDefault();
     setNote(e.target.value);
   };
 
-  const handleCloseModal = ()=>{
-    toggleCommentModal()
-    changeType({ name:'', value:'' });
-    changeConfig({ xPath: "", selectedText: "" });
-    
-  }
+  const handleCloseModal = () => {
+    toggleCommentModal();
+    changeType({ name: "", value: "" });
+    changeConfig({
+      startPath: [],
+      startOffset: 0,
+      endPath: [],
+      endOffset: 0,
+      selectedText: "",
+    });
+  };
 
   return (
-    <section className="modal-container-reed" >
-      <div className="modal-content-reed" style={{position:'relative'}}>
-      <span onClick={handleCloseModal}  className="floating-toolbar-close">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height={"27px"}
-              width={"27px"}
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
+    <section className="modal-overlay" onClick={handleCloseModal}>
+      <div className="modal-card modal-card-comment" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-header">
+          <h2>Add a note</h2>
+          <button onClick={handleCloseModal} className="modal-close-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
-          </span>
-        <h1>Add Your Notes</h1>
+          </button>
+        </div>
         <textarea
           onChange={addNotes}
+          onKeyDown={handleKeyDown}
           className="notes-input"
-          placeholder="Enter your Notes"
+          placeholder="Write your note..."
+          autoFocus
         />
-        <button
-          onClick={() => submitNote()}
-          className="btn-submit-reed"
-        >
-          Add Note
-        </button>
+        <div className="modal-footer">
+          <span className="modal-hint">Ctrl+Enter to submit</span>
+          <button onClick={submitNote} className="btn-submit">
+            Add Note
+          </button>
+        </div>
       </div>
     </section>
   );

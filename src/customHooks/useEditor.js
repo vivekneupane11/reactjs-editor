@@ -1,16 +1,19 @@
 import { create } from 'zustand';
 
-const defaultConfig ={
+const defaultType ={
     name:'',
     value:''
   }
 export const useEditor = create((set) => ({
-  type:{...defaultConfig} ,
+  type:{...defaultType} ,
   config:{
-    xPath:'',
+    startPath:[],
+    startOffset:0,
+    endPath:[],
+    endOffset:0,
     selectedText:''
   },
   changeType: ({name,value}) => set((state)=>({type:{...state.type,name:name,value:value}})),
-  changeConfig: ({xPath,selectedText}) => set((state)=>({config:{...state.config,xPath:xPath,selectedText:selectedText}}))
+  changeConfig: (updates) => set((state)=>({config:{...state.config,...updates}}))
 })
 )

@@ -6,98 +6,92 @@ import useUpdateDom from "../customHooks/useUpdateDom";
 
 export default function FloatingToolBar({ x, y }) {
   const [open, setOpen] = useState(true);
-  const changeType = useEditor(state=>state.changeType)
-  const {addBold} = useUpdateDom()
+  const changeType = useEditor((state) => state.changeType);
+  const { addBold } = useUpdateDom();
 
   const closeMenu = () => setOpen(!open);
-  const toggleModal = useModal(state=>state.toggleModal)
-  const toggleCommentModal = useCommentModal(state=>state.toggleCommentModal)
+  const toggleModal = useModal((state) => state.toggleModal);
+  const toggleCommentModal = useCommentModal(
+    (state) => state.toggleCommentModal
+  );
 
   const type = useEditor((state) => state.type);
   const config = useEditor((state) => state.config);
 
-  const openModal = ({name,value}) => {
-
-
-    changeType({name,value})
-    if(name === 'bold') return;
-    if(name === 'comment'){
-      toggleCommentModal()
+  const openModal = ({ name, value }) => {
+    changeType({ name, value });
+    if (name === "bold") return;
+    if (name === "comment") {
+      toggleCommentModal();
+    } else {
+      toggleModal();
     }
-    else{
-      toggleModal()
+  };
 
-    }
-
-  }
-useEffect(()=>{
-if(type.name === 'bold' && config.selectedText){
-  addBold();
-} 
-},[type.name,addBold])
   useEffect(() => {
-     setOpen(true);
+    if (type.name === "bold" && config.selectedText) {
+      addBold();
+    }
+  }, [type.name, addBold]);
+
+  useEffect(() => {
+    setOpen(true);
   }, [x]);
+
   return (
     <>
       {open && config.selectedText && x ? (
         <section
-          style={{ left: `${x-100}px`, top: `${y+10}px`, position: "absolute" }}
+          className="toolbar-wrapper"
+          style={{
+            left: `${x - 80}px`,
+            top: `${y + 12}px`,
+            position: "absolute",
+          }}
         >
           <div className="floating-toolbar">
-            <span onClick={()=>openModal({name:'bold'})} >B</span>
-            <span onClick={()=>openModal({name:'highlight'})}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                height={"20px"}
-                width={"20px"}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 11.25l1.5 1.5.75-.75V8.758l2.276-.61a3 3 0 10-3.675-3.675l-.61 2.277H12l-.75.75 1.5 1.5M15 11.25l-8.47 8.47c-.34.34-.8.53-1.28.53s-.94.19-1.28.53l-.97.97-.75-.75.97-.97c.34-.34.53-.8.53-1.28s.19-.94.53-1.28L12.75 9M15 11.25L12.75 9"
-                />
-              </svg>
-            </span>
-            <span onClick={()=>openModal({name:'comment'})} >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                height="20px"
-                width={"20px"}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
-                />
-              </svg>
-            </span>
-          </div>
-          <span onClick={closeMenu} className="floating-toolbar-close">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height={"27px"}
-              width={"27px"}
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
+            <button
+              className="toolbar-btn"
+              onClick={() => openModal({ name: "bold" })}
+              title="Bold"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6zm0 8h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+              </svg>
+            </button>
+            <div className="toolbar-divider" />
+            <button
+              className="toolbar-btn"
+              onClick={() => openModal({ name: "highlight" })}
+              title="Highlight"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+            </button>
+            <div className="toolbar-divider" />
+            <button
+              className="toolbar-btn"
+              onClick={() => openModal({ name: "comment" })}
+              title="Comment"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </button>
+            <div className="toolbar-divider" />
+            <button
+              className="toolbar-btn toolbar-btn-close"
+              onClick={closeMenu}
+              title="Dismiss"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
         </section>
       ) : null}
     </>
