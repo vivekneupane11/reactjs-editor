@@ -46,7 +46,7 @@ export default function FloatingToolBar({ x, y }) {
           style={{
             left: `${x - 80}px`,
             top: `${y + 12}px`,
-            position: "absolute",
+            position: "fixed",
           }}
         >
           <div className="floating-toolbar">

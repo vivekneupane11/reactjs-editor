@@ -11,7 +11,7 @@ export default function useSelection() {
       if(!editorRef.current.contains(e.target)) return;
       let text = document.getSelection().toString();
       if (!text) return;
-      setMousePoint({ x: e.pageX, y: e.pageY });
+      setMousePoint({ x: e.clientX, y: e.clientY });
 
      try{
       const xPath = await fromRange(
